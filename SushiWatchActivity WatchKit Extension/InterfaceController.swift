@@ -44,7 +44,7 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
             print("left direction")
             // Here is the message you want to send to the watch
             // All messages get sent as dictionaries
-            let message = ["direction":"hello left button pressed"] as [String : Any]
+            let message = ["direction":"left"] as [String : Any]
             
             // Send the message
             WCSession.default.sendMessage(message, replyHandler:nil)
@@ -57,7 +57,7 @@ class InterfaceController: WKInterfaceController,WCSessionDelegate {
             print("right direction")
             // Here is the message you want to send to the watch
             // All messages get sent as dictionaries
-            let message = ["direction":"hello right buttton pressed"] as [String : Any]
+            let message = ["direction":"right"] as [String : Any]
 
             // Send the message
             WCSession.default.sendMessage(message, replyHandler:nil)

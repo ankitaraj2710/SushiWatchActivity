@@ -35,8 +35,71 @@ class GameScene: SKScene,WCSessionDelegate{
         
         let direction = message["direction"] as! String
         print("\(direction)")
+        catMovement(direction: direction)
+        
+    }
+    func catMovement(direction:String){
+        if(direction == "left")
+        {
+            print("TAP LEFT")
+            // 2. person clicked left, so move cat left
+            cat.position = CGPoint(x:self.size.width*0.25, y:100)
+            
+            // change the cat's direction
+            let facingRight = SKAction.scaleX(to: 1, duration: 0)
+            self.cat.run(facingRight)
+            
+            // save cat's position
+            self.catPosition = "left"
+            // animation code call
+            animation()
+        }
+        else if(direction == "right"){
+            print("TAP RIGHT")
+            // 2. person clicked right, so move cat right
+            cat.position = CGPoint(x:self.size.width*0.85, y:100)
+            
+            // change the cat's direction
+            let facingLeft = SKAction.scaleX(to: -1, duration: 0)
+            self.cat.run(facingLeft)
+            
+            // save cat's position
+            self.catPosition = "right"
+        }
+        
     }
    
+    // animation code
+    func animation() {
+        let pieceToRemove = self.sushiTower.first
+        let stickToRemove = self.chopstickGraphicsArray.first
+        
+        if (pieceToRemove != nil && stickToRemove != nil) {
+            // SUSHI: hide it from the screen & remove from game logic
+            pieceToRemove!.removeFromParent()
+            self.sushiTower.remove(at: 0)
+            
+            // STICK: hide it from screen & remove from game logic
+            stickToRemove!.removeFromParent()
+            self.chopstickGraphicsArray.remove(at:0)
+            
+            // STICK: Update stick positions array:
+            self.chopstickPositions.remove(at:0)
+            
+            // SUSHI: loop through the remaining pieces and redraw the Tower
+            for piece in sushiTower {
+                piece.position.y = piece.position.y - SUSHI_PIECE_GAP
+            }
+            
+            // STICK: loop through the remaining sticks and redraw
+            for stick in chopstickGraphicsArray {
+                stick.position.y = stick.position.y - SUSHI_PIECE_GAP
+            }
+        }
+    }
+    
+    
+    
         let cat = SKSpriteNode(imageNamed: "character1")
         let sushiBase = SKSpriteNode(imageNamed:"roll")
         // Make a tower
