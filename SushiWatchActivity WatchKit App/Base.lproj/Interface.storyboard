@@ -14,8 +14,16 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SushiWatchActivity_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <button width="1" alignment="left" title="Left Button" id="YvL-ro-dIn"/>
-                        <button width="1" alignment="left" title="Right Button" id="lZN-Pl-8WA"/>
+                        <button width="1" alignment="left" title="Left Button" id="YvL-ro-dIn">
+                            <connections>
+                                <action selector="pressLeftButton" destination="AgC-eL-Hgc" id="jd8-bh-Nxm"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Right Button" id="lZN-Pl-8WA">
+                            <connections>
+                                <action selector="pressRightButton" destination="AgC-eL-Hgc" id="0vA-qB-mpa"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>

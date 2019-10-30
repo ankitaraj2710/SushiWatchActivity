@@ -22,6 +22,7 @@
 		89A032B12369F73C0049FDD3 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 89A032B02369F73C0049FDD3 /* Actions.sks */; };
 		89A032B32369F7460049FDD3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A032B22369F7460049FDD3 /* GameScene.swift */; };
 		89A032B52369F75E0049FDD3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A032B42369F75E0049FDD3 /* GameViewController.swift */; };
+		89A032B7236A1A460049FDD3 /* SushiPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A032B6236A1A460049FDD3 /* SushiPiece.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		89A032B02369F73C0049FDD3 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		89A032B22369F7460049FDD3 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		89A032B42369F75E0049FDD3 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		89A032B6236A1A460049FDD3 /* SushiPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiPiece.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				89A032B22369F7460049FDD3 /* GameScene.swift */,
 				89A032572369E6C50049FDD3 /* Main.storyboard */,
 				89A032B42369F75E0049FDD3 /* GameViewController.swift */,
+				89A032B6236A1A460049FDD3 /* SushiPiece.swift */,
 				89A0325A2369E6C70049FDD3 /* Assets.xcassets */,
 				89A0325C2369E6C70049FDD3 /* LaunchScreen.storyboard */,
 				89A0325F2369E6C70049FDD3 /* Info.plist */,
@@ -298,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89A032B52369F75E0049FDD3 /* GameViewController.swift in Sources */,
+				89A032B7236A1A460049FDD3 /* SushiPiece.swift in Sources */,
 				89A032B32369F7460049FDD3 /* GameScene.swift in Sources */,
 				89A032542369E6C50049FDD3 /* AppDelegate.swift in Sources */,
 			);
